@@ -2,10 +2,9 @@
     "name": "react-shadowed-double-scrollbar",
     "version": "1.0.5",
     "description": "A simple react component for adding scrollbars on both top and bottom of content with customizable shadows.",
-    "author": "chaiinchomp",
+    "author": "chaiinchomp,vabrell",
     "license": "MIT",
-    "repository": "chaiinchomp/react-shadowed-double-scrollbar",
-    "homepage": "https://chaiinchomp.github.io/react-shadowed-double-scrollbar",
+    "repository": "vabrell/react-shadowed-double-scrollbar",
     "keywords": [
         "react",
         "react-component",

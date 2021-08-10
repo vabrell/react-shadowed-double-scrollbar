@@ -19,17 +19,21 @@ export default function DoubleScrollbar({ children, backgroundColor, shadowVaria
     const background = backgroundColor || getDefaultBackgroundColor(shadowVariant);
 
     const calculateWidth = () => {
-        const newWidth =
-            childWrapper.current && childWrapper.current.scrollWidth ? `${childWrapper.current.scrollWidth}px` : 'auto';
-        if (newWidth !== width) {
-            setWidth(newWidth);
+        if (childWrapper.current) {
+            const newWidth = childWrapper.current.scrollWidth !== childWrapper.current.offsetWidth
+                ? `${childWrapper.current.scrollWidth}px`
+                : 'auto';
+
+            if (newWidth !== width) {
+                setWidth(newWidth);
+            }
         }
     };
 
     useEffect(() => {
         calculateWidth();
-    });
-    window.addEventListener('resize', calculateWidth());
+    }, [childWrapper.current?.offsetWidth]);
+    // window.addEventListener('resize', calculateWidth());
 
     if (outerDiv.current) {
         outerDiv.current.onscroll = () => {

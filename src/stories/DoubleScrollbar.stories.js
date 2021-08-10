@@ -27,7 +27,7 @@ export default {
 };
 
 const Template = ({ shadowVariant, textColor, backgroundColor }) => (
-    <div style={{ width: '800px' }}>
+    <div>
         <DoubleScrollbar shadowVariant={shadowVariant} backgroundColor={backgroundColor}>
             <div style={{ width: '1000px', color: textColor, fontFamily: 'Helvetica, sans-serif' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
