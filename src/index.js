@@ -46,7 +46,7 @@ export default function DoubleScrollbar({ children, backgroundColor, shadowVaria
     return (
         <div>
             <div ref={outerDiv} style={{ overflowX: 'auto', overflowY: 'hidden', background }}>
-                <div ref={innerDiv} style={{ paddingTop: '0.1px', width }} />
+                <div ref={innerDiv} style={{ height: '0.01rem', width }} />
             </div>
             <div
                 ref={childWrapper}
